@@ -54,7 +54,7 @@ public class UserTest {
 		Assert.assertEquals(res.getStatusCode(),200);
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3,groups="Regression")
 	public void testupdateUserByName()
 	{
 		userPayload.setFirstName(f.name().firstName());
@@ -75,7 +75,7 @@ public class UserTest {
 		
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4,groups="Regression")
 	public void testDeleteUserByName()
 	{
 		Response res=UserEndPoints.deleteUser(this.userPayload.getUsername());
